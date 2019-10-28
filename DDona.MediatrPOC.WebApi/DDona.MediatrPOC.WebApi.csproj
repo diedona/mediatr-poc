@@ -13,4 +13,9 @@
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DDona.MediatrPOC.Domain\DDona.MediatrPOC.Domain.csproj" />
+    <ProjectReference Include="..\DDona.MediatrPOC.Infra\DDona.MediatrPOC.Infra.csproj" />
+  </ItemGroup>
+
 </Project>

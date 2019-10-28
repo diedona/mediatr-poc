@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DDona.MediatrPOC.Domain.Repository;
+using DDona.MediatrPOC.Infra.Repository;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,6 +29,7 @@ namespace DDona.MediatrPOC.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMediatR(typeof(Startup));
+            services.AddSingleton<IProductRepository, ProductRepository>();
             services.AddControllers();
         }
 
