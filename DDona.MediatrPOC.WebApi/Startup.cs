@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DDona.MediatrPOC.Domain.Command;
 using DDona.MediatrPOC.Domain.Repository;
 using DDona.MediatrPOC.Infra.Repository;
 using MediatR;
@@ -28,7 +29,7 @@ namespace DDona.MediatrPOC.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMediatR(typeof(Startup));
+            services.AddMediatR(typeof(Command));
             services.AddSingleton<IProductRepository, ProductRepository>();
             services.AddControllers();
         }
