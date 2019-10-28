@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.MediatrPOC.Domain", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.MediatrPOC.WebApi", "DDona.MediatrPOC.WebApi\DDona.MediatrPOC.WebApi.csproj", "{5805D145-916E-4D49-A243-B68ED695DEAB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.MediatrPOC.Infra", "DDona.MediatrPOC.Infra\DDona.MediatrPOC.Infra.csproj", "{4A0BCCB0-4EC3-40FC-BCA6-0CB876F5C2F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5805D145-916E-4D49-A243-B68ED695DEAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5805D145-916E-4D49-A243-B68ED695DEAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5805D145-916E-4D49-A243-B68ED695DEAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A0BCCB0-4EC3-40FC-BCA6-0CB876F5C2F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A0BCCB0-4EC3-40FC-BCA6-0CB876F5C2F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A0BCCB0-4EC3-40FC-BCA6-0CB876F5C2F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A0BCCB0-4EC3-40FC-BCA6-0CB876F5C2F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
