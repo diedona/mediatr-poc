@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DDona.MediatrPOC.Domain.Command.ProductCommands;
+using DDona.MediatrPOC.Domain.Query.ProductQueries;
 using DDona.MediatrPOC.Domain.Repository;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -31,9 +32,9 @@ namespace DDona.MediatrPOC.WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get(GetProductCommand command)
+        public async Task<IActionResult> Get()
         {
-            var response = await _mediator.Send(command);
+            var response = await _mediator.Send(new GetAllProductQuery());
             return Ok(response);
         }
     }

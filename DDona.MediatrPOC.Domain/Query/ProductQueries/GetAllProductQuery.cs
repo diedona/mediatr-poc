@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DDona.MediatrPOC.Domain.Command.ProductCommands
+namespace DDona.MediatrPOC.Domain.Query.ProductQueries
 {
-    public class GetProductCommand : Command, IRequest<IList<Product>>
+    public class GetAllProductQuery : Query, IRequest<IList<Product>>
     {
     }
 }
