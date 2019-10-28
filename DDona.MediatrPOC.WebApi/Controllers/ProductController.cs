@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DDona.MediatrPOC.Domain.Command.Product;
+using DDona.MediatrPOC.Domain.Command.ProductCommands;
 using DDona.MediatrPOC.Domain.Repository;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -25,6 +25,13 @@ namespace DDona.MediatrPOC.WebApi.Controllers
 
         [HttpPost]
         public async Task<IActionResult> Post(CreateProductCommand command)
+        {
+            var response = await _mediator.Send(command);
+            return Ok(response);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Get(GetProductCommand command)
         {
             var response = await _mediator.Send(command);
             return Ok(response);

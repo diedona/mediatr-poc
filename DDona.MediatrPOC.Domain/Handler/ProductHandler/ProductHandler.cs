@@ -1,6 +1,6 @@
-﻿using DDona.MediatrPOC.Domain.Command.Product;
+﻿using DDona.MediatrPOC.Domain.Command.ProductCommands;
 using DDona.MediatrPOC.Domain.Entity;
-using DDona.MediatrPOC.Domain.Notification.Product;
+using DDona.MediatrPOC.Domain.Notification.ProductNotification;
 using DDona.MediatrPOC.Domain.Repository;
 using MediatR;
 using System;
@@ -11,8 +11,9 @@ using System.Threading.Tasks;
 
 namespace DDona.MediatrPOC.Domain.Handler.ProductHandler
 {
-    public class ProductHandler
-        : IRequestHandler<CreateProductCommand, Guid>
+    public class ProductHandler : 
+        IRequestHandler<CreateProductCommand, Guid>,
+        IRequestHandler<GetProductCommand, IList<Product>>
     {
         private readonly IMediator _mediator;
         private readonly IProductRepository _productRepository;
@@ -30,6 +31,13 @@ namespace DDona.MediatrPOC.Domain.Handler.ProductHandler
 
             _mediator.Publish(new ProductCreatedNotification() { Id = product.Id }, cancellationToken);
             return Task.FromResult(product.Id);
+        }
+
+        public Task<IList<Product>> Handle(GetProductCommand request, CancellationToken cancellationToken)
+        {
+            var products = _productRepository.Get();
+            _mediator.Publish(new ProductGetNotification(products.Count), cancellationToken);
+            return Task.FromResult(products);
         }
     }
 }

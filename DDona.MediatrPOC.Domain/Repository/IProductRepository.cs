@@ -8,5 +8,6 @@ namespace DDona.MediatrPOC.Domain.Repository
     public interface IProductRepository
     {
         void Save(Product product);
+        IList<Product> Get();
     }
 }

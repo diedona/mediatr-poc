@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DDona.MediatrPOC.Domain.Command.Product
+namespace DDona.MediatrPOC.Domain.Command.ProductCommands
 {
     public class CreateProductCommand : Command, IRequest<Guid>
     {

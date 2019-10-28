@@ -1,4 +1,4 @@
-﻿using DDona.MediatrPOC.Domain.Notification.Product;
+﻿using DDona.MediatrPOC.Domain.Notification.ProductNotification;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,14 +8,23 @@ using System.Threading.Tasks;
 
 namespace DDona.MediatrPOC.Domain.EventsHandler.Product
 {
-    public class ProductHandler
-        : INotificationHandler<ProductCreatedNotification>
+    public class ProductHandler : 
+        INotificationHandler<ProductCreatedNotification>,
+        INotificationHandler<ProductGetNotification>
     {
         public Task Handle(ProductCreatedNotification notification, CancellationToken cancellationToken)
         {
             return Task.Run(() =>
             {
                 Console.WriteLine($"Inserimos um produto de Id {notification.Id}");
+            });
+        }
+
+        public Task Handle(ProductGetNotification notification, CancellationToken cancellationToken)
+        {
+            return Task.Run(() =>
+            {
+                Console.WriteLine($"Buscamos {notification.Quantity} produto(s)");
             });
         }
     }

@@ -2,6 +2,7 @@
 using DDona.MediatrPOC.Domain.Repository;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DDona.MediatrPOC.Infra.Repository
@@ -22,6 +23,11 @@ namespace DDona.MediatrPOC.Infra.Repository
         public void Save(Product product)
         {
             _products.Add(product);
+        }
+
+        public IList<Product> Get()
+        {
+            return _products.ToList();
         }
     }
 }
