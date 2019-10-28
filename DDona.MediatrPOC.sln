@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.MediatrPOC.Domain", "DDona.MediatrPOC.Domain\DDona.MediatrPOC.Domain.csproj", "{88976221-AEAC-4CED-883A-053C83087B12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.MediatrPOC.WebApi", "DDona.MediatrPOC.WebApi\DDona.MediatrPOC.WebApi.csproj", "{5805D145-916E-4D49-A243-B68ED695DEAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{88976221-AEAC-4CED-883A-053C83087B12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88976221-AEAC-4CED-883A-053C83087B12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88976221-AEAC-4CED-883A-053C83087B12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5805D145-916E-4D49-A243-B68ED695DEAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5805D145-916E-4D49-A243-B68ED695DEAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5805D145-916E-4D49-A243-B68ED695DEAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5805D145-916E-4D49-A243-B68ED695DEAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
