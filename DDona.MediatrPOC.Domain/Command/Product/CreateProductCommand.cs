@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DDona.MediatrPOC.Domain.Command.Product
 {
-    public class CreateProductCommand : Command, IRequest<int>
+    public class CreateProductCommand : Command, IRequest<Guid>
     {
         public string Title { get; set; }
         public string Description { get; set; }
