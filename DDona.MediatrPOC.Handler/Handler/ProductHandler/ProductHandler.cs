@@ -27,6 +27,11 @@ namespace DDona.MediatrPOC.Mediator.Handler.ProductHandler
 
         public Task<Guid> Handle(CreateProductCommand request, CancellationToken cancellationToken)
         {
+            if(!request.IsValid)
+            {
+                return Task.FromResult(new Guid());
+            }
+
             Product product = new Product(request.Title, request.Description, request.Price);
             _productRepository.Save(product);
 
