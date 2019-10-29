@@ -10,9 +10,9 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace DDona.MediatrPOC.Domain.Handler.ProductHandler
+namespace DDona.MediatrPOC.Mediator.Handler.ProductHandler
 {
-    public class ProductHandler : 
+    public class ProductHandler :
         IRequestHandler<CreateProductCommand, Guid>,
         IRequestHandler<GetAllProductQuery, IList<Product>>
     {

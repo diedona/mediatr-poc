@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DDona.MediatrPOC.Domain\DDona.MediatrPOC.Domain.csproj" />
+    <ProjectReference Include="..\DDona.MediatrPOC.Handler\DDona.MediatrPOC.Mediator.csproj" />
     <ProjectReference Include="..\DDona.MediatrPOC.Infra\DDona.MediatrPOC.Infra.csproj" />
   </ItemGroup>
 

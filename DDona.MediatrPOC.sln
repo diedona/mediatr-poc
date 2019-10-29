@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.MediatrPOC.Domain", "DDona.MediatrPOC.Domain\DDona.MediatrPOC.Domain.csproj", "{88976221-AEAC-4CED-883A-053C83087B12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDona.MediatrPOC.Domain", "DDona.MediatrPOC.Domain\DDona.MediatrPOC.Domain.csproj", "{88976221-AEAC-4CED-883A-053C83087B12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.MediatrPOC.WebApi", "DDona.MediatrPOC.WebApi\DDona.MediatrPOC.WebApi.csproj", "{5805D145-916E-4D49-A243-B68ED695DEAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDona.MediatrPOC.WebApi", "DDona.MediatrPOC.WebApi\DDona.MediatrPOC.WebApi.csproj", "{5805D145-916E-4D49-A243-B68ED695DEAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.MediatrPOC.Infra", "DDona.MediatrPOC.Infra\DDona.MediatrPOC.Infra.csproj", "{4A0BCCB0-4EC3-40FC-BCA6-0CB876F5C2F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDona.MediatrPOC.Infra", "DDona.MediatrPOC.Infra\DDona.MediatrPOC.Infra.csproj", "{4A0BCCB0-4EC3-40FC-BCA6-0CB876F5C2F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.MediatrPOC.Mediator", "DDona.MediatrPOC.Handler\DDona.MediatrPOC.Mediator.csproj", "{B35420A2-8A8B-4392-A4A4-01B800338C44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{4A0BCCB0-4EC3-40FC-BCA6-0CB876F5C2F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A0BCCB0-4EC3-40FC-BCA6-0CB876F5C2F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A0BCCB0-4EC3-40FC-BCA6-0CB876F5C2F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B35420A2-8A8B-4392-A4A4-01B800338C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B35420A2-8A8B-4392-A4A4-01B800338C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B35420A2-8A8B-4392-A4A4-01B800338C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B35420A2-8A8B-4392-A4A4-01B800338C44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

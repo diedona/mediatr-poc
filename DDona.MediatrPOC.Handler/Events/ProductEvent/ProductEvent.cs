@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace DDona.MediatrPOC.Domain.EventsHandler.ProductEvent
+namespace DDona.MediatrPOC.Mediator.Events.ProductEvent
 {
-    public class ProductHandler : 
+    public class ProductEvent :
         INotificationHandler<ProductCreatedNotification>,
         INotificationHandler<ProductGetNotification>
     {

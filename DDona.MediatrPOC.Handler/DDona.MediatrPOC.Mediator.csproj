@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>DDona.MediatrPOC.Mediator</AssemblyName>
+    <RootNamespace>DDona.MediatrPOC.Mediator</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DDona.MediatrPOC.Domain\DDona.MediatrPOC.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
