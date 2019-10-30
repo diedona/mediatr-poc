@@ -6,15 +6,16 @@ using System.Text;
 
 namespace DDona.MediatrPOC.Domain.Command.ProductCommands
 {
-    public class CreateProductCommand : Command, IRequest<Guid>
+    public class CreateProductCommand : Command, IRequest<CommandResult>
     {
         public string Title { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
 
-        public CreateProductCommand()
+        public override bool IsValid()
         {
             _validation = new CreateProductCommandValidation().Validate(this);
+            return _validation.IsValid;
         }
     }
 }

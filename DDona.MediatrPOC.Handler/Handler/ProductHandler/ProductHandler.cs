@@ -1,4 +1,5 @@
-﻿using DDona.MediatrPOC.Domain.Command.ProductCommands;
+﻿using DDona.MediatrPOC.Domain.Command;
+using DDona.MediatrPOC.Domain.Command.ProductCommands;
 using DDona.MediatrPOC.Domain.Entity;
 using DDona.MediatrPOC.Domain.Notification.ProductNotification;
 using DDona.MediatrPOC.Domain.Query.ProductQueries;
@@ -13,7 +14,7 @@ using System.Threading.Tasks;
 namespace DDona.MediatrPOC.Mediator.Handler.ProductHandler
 {
     public class ProductHandler :
-        IRequestHandler<CreateProductCommand, Guid>,
+        IRequestHandler<CreateProductCommand, CommandResult>,
         IRequestHandler<GetAllProductQuery, IList<Product>>
     {
         private readonly IMediator _mediator;
@@ -25,18 +26,19 @@ namespace DDona.MediatrPOC.Mediator.Handler.ProductHandler
             _productRepository = productRepository;
         }
 
-        public Task<Guid> Handle(CreateProductCommand request, CancellationToken cancellationToken)
+        public Task<CommandResult> Handle(CreateProductCommand request, CancellationToken cancellationToken)
         {
-            if(!request.IsValid)
+            if(!request.IsValid())
             {
-                return Task.FromResult(new Guid());
+                var result = new CommandResult(false, request.GetValidationErrors());
+                return Task.FromResult(result);
             }
 
             Product product = new Product(request.Title, request.Description, request.Price);
             _productRepository.Save(product);
 
             _mediator.Publish(new ProductCreatedNotification() { Id = product.Id }, cancellationToken);
-            return Task.FromResult(product.Id);
+            return Task.FromResult(new CommandResult(true));
         }
 
         public Task<IList<Product>> Handle(GetAllProductQuery request, CancellationToken cancellationToken)

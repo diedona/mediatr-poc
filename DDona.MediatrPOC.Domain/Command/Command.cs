@@ -1,4 +1,6 @@
-﻿using FluentValidation.Results;
+﻿using DDona.MediatrPOC.Domain.Validation;
+using FluentValidation;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,6 +11,8 @@ namespace DDona.MediatrPOC.Domain.Command
     {
         protected ValidationResult _validation;
 
-        public bool IsValid => _validation.IsValid;
+        public abstract bool IsValid();
+
+        public string GetValidationErrors() => _validation.ToString();
     }
 }
